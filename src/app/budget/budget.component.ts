@@ -7,7 +7,7 @@ import { CommonService } from '../core/common.service';
 })
 export class BudgetComponent implements OnInit {
   constructor(public commonService: CommonService) {}
-  amount = 0;
+  amount: number = 0;
 
   ngOnInit(): void {
     this.commonService.getCurrentBudget();
