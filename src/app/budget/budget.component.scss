@@ -1,0 +1,19 @@
+.budget {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 300px;
+  border: 1px solid gray;
+  padding: 8px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+
+  h3{
+    margin: 0;
+    text-transform: uppercase;
+  }
+  input{
+    margin: 8px 0;
+  }
+}

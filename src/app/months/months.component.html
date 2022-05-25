@@ -1,0 +1,15 @@
+<article class="app-months">
+  <div class="months">
+    <div
+      *ngFor="let month of months"
+      [ngClass]="{ selected: month.value === selectedMonth }"
+      class="months__child"
+      (click)="onSelectMonth(month.value)"
+    >
+      <span>{{ month.label }}</span>
+      <i>{{ month.value }}</i>
+    </div>
+  </div>
+
+
+</article>

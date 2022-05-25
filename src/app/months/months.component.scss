@@ -1,0 +1,28 @@
+.app-months {
+    display: flex;
+    flex-direction: column;
+
+
+    .months {
+        display: flex;
+        flex-direction: row;
+
+        &__child {
+            margin: 8px;
+            display: flex;
+            flex-direction: column;
+            color: gray;
+            cursor: pointer;
+
+            &.selected {
+                color: #000;
+            }
+        }
+    }
+
+    .budget {
+        h3 {
+            text-transform: uppercase;
+        }
+    }
+}

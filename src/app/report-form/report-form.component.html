@@ -1,0 +1,11 @@
+<div class="app-report-form">
+<button (click)="onToggleForm()" class="toggle-add">ADD</button>
+    <form *ngIf="isShowForm">
+        <fieldset>
+            <input type="text" placeholder="Title">
+            <input type="number" placeholder="Amount">
+            <textarea type="text" placeholder="Description"></textarea>
+            <button>ADD</button>
+        </fieldset>
+    </form>
+</div>

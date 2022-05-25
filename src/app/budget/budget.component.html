@@ -1,0 +1,5 @@
+<div class="budget">
+  <h3>budget: {{ commonService.currentBudget | displayMoney }} VND</h3>
+  <input type="number" placeholder="Amount" [(ngModel)]="amount">
+  <button [disabled]="amount ? false : true">Increase</button>
+</div>
