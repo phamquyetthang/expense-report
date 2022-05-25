@@ -11,6 +11,7 @@ import { ReportFormComponent } from './report-form/report-form.component';
 import { BudgetComponent } from './budget/budget.component';
 import { environment } from 'src/environments/environment';
 import { DisplayMoneyPipe } from './core/pipes/display-money.pipe';
+import { ExpenseComponent } from './expense/expense.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DisplayMoneyPipe } from './core/pipes/display-money.pipe';
     MonthsComponent,
     ReportFormComponent,
     BudgetComponent,
-    DisplayMoneyPipe
+    DisplayMoneyPipe,
+    ExpenseComponent
   ],
   imports: [
     BrowserModule,

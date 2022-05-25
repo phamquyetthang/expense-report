@@ -1,5 +1,24 @@
 <div class="budget">
-  <h3>budget: {{ commonService.currentBudget | displayMoney }} VND</h3>
-  <input type="number" placeholder="Amount" [(ngModel)]="amount">
-  <button [disabled]="amount ? false : true">Increase</button>
+  <h3>budget: {{ commonService.currentBudget | displayMoney }}</h3>
+  <p>+ {{ commonService.totalEarnAmount | displayMoney }}</p>
+  <p>- {{ commonService.totalSpentAmount | displayMoney }}</p>
+  <hr />
+  <p>
+    Availability:
+    {{
+      commonService.currentBudget +
+        commonService.totalEarnAmount -
+        commonService.totalSpentAmount | displayMoney
+    }}
+  </p>
+  <div *ngIf="canEdit" class="budget-form">
+    <input type="number" placeholder="Amount" [(ngModel)]="amount" />
+    <button [disabled]="amount ? false : true" (click)="onIncrease()">
+      Increase
+    </button>
+    <i>or</i>
+    <button [disabled]="amount ? false : true" (click)="onUpdate()">
+      Update
+    </button>
+  </div>
 </div>

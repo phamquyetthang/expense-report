@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ReportFormComponent implements OnInit {
 
   constructor() { }
-  isShowForm:Boolean = true
+  isShowForm:Boolean = false
+  action: 'spend' | 'revenue' = 'spend'
   onToggleForm(): void{
     this.isShowForm = !this.isShowForm
   } 

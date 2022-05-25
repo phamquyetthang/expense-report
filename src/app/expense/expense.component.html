@@ -1,0 +1,7 @@
+<div  *ngIf="commonService.expenses.length" >
+    <div *ngFor="let doc of commonService.expenses">
+        <p>{{doc.title}}</p>
+        <p>{{doc.action === 'spend' ? '-' : '+'}}{{doc.amount}}</p>
+        <p>{{doc.description}}</p>
+    </div>
+</div>

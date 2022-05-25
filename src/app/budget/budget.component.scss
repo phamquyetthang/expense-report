@@ -8,12 +8,24 @@
   border-radius: 4px;
   display: flex;
   flex-direction: column;
+  background-color: white;
 
-  h3{
+
+  h3 {
     margin: 0;
     text-transform: uppercase;
   }
-  input{
-    margin: 8px 0;
+
+  p, hr{
+    margin: 0;
+  }
+  .budget-form {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      margin: 8px 0;
+    }
+
   }
 }

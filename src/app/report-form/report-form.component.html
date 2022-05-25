@@ -5,6 +5,10 @@
             <input type="text" placeholder="Title">
             <input type="number" placeholder="Amount">
             <textarea type="text" placeholder="Description"></textarea>
+            <select [value]="action">
+                <option value="spend">spend</option>
+                <option value="revenue">revenue</option>
+            </select>
             <button>ADD</button>
         </fieldset>
     </form>
