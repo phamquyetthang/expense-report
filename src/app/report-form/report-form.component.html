@@ -1,15 +1,14 @@
-<div class="app-report-form">
-<button (click)="onToggleForm()" class="toggle-add">ADD</button>
-    <form *ngIf="isShowForm">
-        <fieldset>
-            <input type="text" placeholder="Title">
-            <input type="number" placeholder="Amount">
-            <textarea type="text" placeholder="Description"></textarea>
-            <select [value]="action">
-                <option value="spend">spend</option>
-                <option value="revenue">revenue</option>
-            </select>
-            <button>ADD</button>
-        </fieldset>
-    </form>
+<div class="app-report-form" *ngIf="isShowForm" (click)="onToggleForm.emit()">
+  <form (click)="handleToggleForm($event)">
+    <fieldset>
+      <input type="text" placeholder="Title" />
+      <input type="number" placeholder="Amount" />
+      <textarea type="text" placeholder="Description"></textarea>
+      <select [value]="action">
+        <option value="spend">spend</option>
+        <option value="revenue">revenue</option>
+      </select>
+      <button>ADD</button>
+    </fieldset>
+  </form>
 </div>

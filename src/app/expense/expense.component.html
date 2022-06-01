@@ -1,7 +1,14 @@
-<div  *ngIf="commonService.expenses.length" >
+<div *ngIf="commonService.expenses.length">
+  <button (click)="onToggleForm()" class="toggle-add">ADD</button>
+  <div>
     <div *ngFor="let doc of commonService.expenses">
-        <p>{{doc.title}}</p>
-        <p>{{doc.action === 'spend' ? '-' : '+'}}{{doc.amount}}</p>
-        <p>{{doc.description}}</p>
+      <p>{{ doc.title }}</p>
+      <p>{{ doc.action === "spend" ? "-" : "+" }}{{ doc.amount }}</p>
+      <p>{{ doc.description }}</p>
     </div>
+  </div>
+  <app-report-form
+    [isShowForm]="isShowForm"
+    (onToggleForm)="onToggleForm()"
+  ></app-report-form>
 </div>

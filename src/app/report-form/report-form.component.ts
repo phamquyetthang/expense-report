@@ -1,19 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-report-form',
   templateUrl: './report-form.component.html',
-  styleUrls: ['./report-form.component.scss']
+  styleUrls: ['./report-form.component.scss'],
 })
 export class ReportFormComponent implements OnInit {
+  constructor() {}
+  @Input() isShowForm?: Boolean;
+  @Output() onToggleForm = new EventEmitter();
+  action: 'spend' | 'revenue' = 'spend';
 
-  constructor() { }
-  isShowForm:Boolean = false
-  action: 'spend' | 'revenue' = 'spend'
-  onToggleForm(): void{
-    this.isShowForm = !this.isShowForm
-  } 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  handleToggleForm(event: MouseEvent) {
+    event.stopPropagation();
   }
-
 }

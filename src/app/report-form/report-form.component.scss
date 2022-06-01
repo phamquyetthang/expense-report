@@ -1,21 +1,21 @@
 .app-report-form {
-    margin-top: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    .toggle-add {
-        background-color: #2F8F9D;
-        color: white;
-        border: hidden;
-        border-radius: 4px;
-        padding: 8px;
-    }
+    justify-content: center;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    z-index: 100;
 
     form {
-        margin-top: 16px;
         border: 1px solid gray;
         border-radius: 4px;
+        background-color: white;
+        padding: 16px 8px;
 
         fieldset {
             border: hidden;
